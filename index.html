@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berni's Mopedseite</title>
+
+    <link rel="icon" type="image/x-icon" href="Background/Motorcycle.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+            background: #0f1115;
+            color: #f4f4f4;
+            line-height: 1.7;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 18px;
+            display: block;
+            margin: 30px auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 2vw, 4rem);
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        h2 {
+            font-size: clamp(1.4rem, 2vw, 2rem);
+            color: #ff4d4d;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff4d4d;
+        }
+
+        .navigation {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 90px 10%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 50px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .intro {
+            text-align: center;
+        }
+
+        .intro p {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .list p {
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .hero-image {
+            margin-top: 50px;
+        }
+
+        .section-dark {
+            background-image: url(Background/wave-haikei.png);
+        }
+
+        .section-space {
+            background-image: url(Background/space.jpg);
+        }
+
+        .section-beach {
+            background-image: url(Background/beach.jpg);
+        }
+
+        .section-stars {
+            background-image: url(Background/stars.png);
+        }
+
+        .section-honda {
+            background-image: url(Background/honda_moped.png);
+        }
+
+        video {
+            width: 100%;
+        }
+
+        img {
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                gap: 20px;
+                flex-wrap: wrap;
+                padding: 15px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .card {
+                padding: 30px;
+            }
+        }
+
+        * {
+            cursor: url("./Background/sparkplug.ico"), auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navigation">
+        <a href="https://www.honda.de" target="_blank">Hersteller</a>
+        <a href="https://www.adac.de" target="_blank">Pannenhelfer</a>
+        <a href="mailto:huebenstein(at)arcor.de">Kontakt</a>
+    </nav>
+
+    <section class="section section-dark">
+        <div class="content">
+            <div class="card intro">
+                <h1>Berni's Mopedseite</h1>
+
+                <h2>
+                    Willkommen auf meiner Mopedseite, ich wünsche Euch viel Spaß beim Stöbern.
+                </h2>
+
+                <p>
+                    Eigentlich probiere ich nur mit HTML und CSS rum
+                </p>
+
+                <div class="list">
+                    <h3>Inhalt:</h3>
+                    <p>- Beschreibung</p>
+                    <p>- Lebenslauf (natürlich vom Moped)</p>
+                    <p>- Fotos (natürlich auch nur vom Moped)</p>
+                </div>
+
+                <h2>
+                    Nö, das ist sie natürlich nicht. Auf ein rollendes Wohnzimmer mit CB- Funk, Griffheizung und
+                    Kaffeemaschine hatte
+                    ich nie Bock!
+                </h2>
+
+                <img class="hero-image" src="Background/honda.png" alt="Honda Goldwing">
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-space">
+        <div class="content">
+            <div class="card">
+
+                <h1>TADAA, Das ist sie!</h1>
+
+                <img src="Images/komplett.jpg">
+
+                <p>
+                    Beschreibung: Mein Motorrad ist eine Honda CBX mit dem internen Modellcode SC06 und dem
+                    Zulassungsdatum August 1984. Nach Auskunft von Honda Deutschland wurde dieses Modell bis 1983
+                    gebaut.
+                </p>
+
+                <p>
+                    Sie hat 1050 qcm verteilt auf 6 Zylinder und 100 PS. Jeder Zylinder wird mit 4 Ventilen beatmet
+                    wobei
+                    die Nockenwellen für ihre Betätigung oben liegen und über zwei Steuerketten angetrieben werden. Ein
+                    DOHC- Motor eben.
+                    Fahrfertig wiegt sie ca. 300 kg. Inklusive Fahrer kommen wir also auf ein Leistungsgewicht von 4
+                    kg/PS.
+                </p>
+
+                <p>
+                    Mit ihren 5 Gängen soll sie auf eine Höchstgeschwindigkeit von 205 km/h kommen, naja?!
+                    Der Motor ist luftgekühlt und jeder Zylinder hat seinen eigenen Vergaser. Der Motor ist
+                    mit seinem stabilen Aufbau ein Teil des Fahrwerkes. Die Federung des Hinterrades ist mit
+                    einem zentralen Federbein nebst Umlenkhebelsystem ausgestattet. Dieses "ProLink-System"
+                    gibt dem Motorrad auch seine Modellbezeichnung. "Honda CBX ProLink". Gelernt aus dem Vorgängermodell
+                    SC01 mit etwas unterdimensionierten Bremsen haben die Konstrukteure für dieses Modell zwei
+                    Doppelkolbenbremszangen
+                    mit innenbelüfteten Bremsscheiben vorgesehen. Einziger Nachteil, die Neubeschaffung als
+                    Verschleißteil ist extrem
+                    schwierig und teuer. Das letztes Angebot bei eBay für eine Bremsscheibe lag bei 379€. Spaß kostet!
+                    Die Bremszangen wurden auch in anderen Modellen wie CB750F, CB900F verbaut, sie sind leichter
+                    als Ersatzteil zu beschaffen.
+                </p>
+
+                <p>
+                    Der Farbton nennt sich "Silbergraumetallic" und ist mit dem typischen "Honda-Rot" und
+                    Schwarz in den Zierstreifen abgesetzt. Die Verkleidung schüzt den Fahrer vor dem Fahrtwind mit zwei
+                    extra Beinschilden.
+                    In der Verkleidung sind zwei Fächer untergebracht um Kleinmaterial und Reservesicherungen
+                    unterzubringen. Die Verkleidung
+                    trägt wesentlich zu dem hohen Leergewicht bei. Als zusätzliches Gimik ist eine Scheinwerfer-
+                    Höhenverstellung vorhanden.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-beach">
+        <div class="content">
+            <div class="card">
+
+                <p>
+                    Der Lebenslauf des Motorrades beginnt für mich erst im Jahr 2008. Davor stand sie lange
+                    Zeit abgemeldet in einer Garage.
+                </p>
+
+                <p>
+                    Es benötigte schon einige Anstrengungen sie nach einer längeren Standzeit wieder zum Leben
+                    zu erwecken.
+                </p>
+
+                <p>
+                    Da ich am Anfang meines Berufslebens einige Zeit als Motorradmechaniker gearbeitet habe,
+                    war die Ursache, verunreinigte Vergaser, schnell gefunden und durch eine komplette Überarbeitung
+                    beseitigt.
+                </p>
+
+                <p>
+                    Mit dem Kilometerstand von ca. 34.500 km starteten ich und meine "Dicke" unsere gemeinsame Zeit.
+                </p>
+
+                <p>
+                    Viele schöne Touren und Reisen habe ich ohne größere Blessuren genossen. Der schnurrende
+                    Sechszylinder hat auch viele Passanten begeistert.
+                </p>
+
+                <p>
+                    Bei 61.000 km war leider ein Austausch des Anlasserfreilaufs notwendig.
+                    Die Freilaufwalzen rutschen auf mehreren Fehlstellen durch und drehten den Motor nicht mehr durch.
+                    Auf einen Kickstarter haben die Konstrukteure damals verzichtet. Für viel Geld war noch ein neuer
+                    Freilauf bei eBay
+                    zu erstehen.
+                </p>
+
+                <p>
+                    Dafür musste der Motor geöffnet werden, der Freilauf liegt leider auf einer Getriebewelle
+                    im Inneren des Motors (blauer Pfeil). Das dies nicht ohne eine Werkstatt zu
+                    erledigen war versteht sich von selbst.
+                </p>
+
+                <div class="gallery">
+                    <img src="Images/motor.jpg" alt="Motor geöffnet">
+                    <img src="Images/werkstatt_2.jpg" alt="Werkstattbild">
+                </div>
+
+                <p>
+                    Leider ist damals mit der Abdichtung des Motors etwas schief gegangen. Beim Zusammenfügen der
+                    Motorhälften müssen die Schaltgabeln exakt in die Führung der Zahnräder eingefädelt werden.
+                    Dabei habe ich scheinbar ein wenig von dem Dichtmittel abgewischt, sodass ich den
+                    Motor jetzt erneut öffnen muss um die Abdichtung wieder herzustellen.
+                </p>
+
+                <p>
+                    Damit ergibt sich die Gelegenheit die vielen kleinen Blessuren an den Lackteilen durch eine
+                    Neulackierung zu beseitigen.
+                </p>
+
+                <p>
+                    Die Zierstreifen sind glücklicherweise weiterhin bei eBay zu bekommen. Nicht billig,
+                    aber Spaß kostet eben!
+                </p>
+
+                <p>
+                    Den exakten Farbton kann man heutzutage glücklicherweise mit einem Farbmeßgerät ermitteln,
+                    ich bleibe gespannt.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="content">
+            <div class="card">
+
+                <p>
+                    Der Neulack wurde nicht nur aufgrund des Alters notwendig. Zweimal hat jemand meine Dicke
+                    auf die Seite gelegt.
+                </p>
+
+                <p>
+                    Einmal hat mich ein Autofahrer beim Rückwärtsfahren übersehen und mich vom Sattel geholt.
+                </p>
+
+                <img src="Images/auspuff.jpg" alt="Beschädigter Auspuff">
+
+                <video controls preload="metadata" muted>
+                    <source src="Images/nz_video.mp4" type="video/mp4">
+                </video>
+
+                <p>
+                    Ein zweites Mal hat mein Parkplatznachbar beim Einparken den Überblick verloren und die
+                    Dicke vom Ständer geschubst. Ich muss mich immer noch mit dem beruhigenden Video von dem
+                    Ärger erholen.
+                </p>
+
+                <p>
+                    Naja, zweimal das "Kleine Sturzset" sprich Brems- bzw. Kupplungshebel, Blinker,
+                    div. Lackschäden an der Verkleidung und Kratzer an den Rückspiegeln.
+                </p>
+
+                <p>
+                    Der Auspufftopf, die Motordeckel, die Beinschilde sind ebenfalls beschädigt,
+                    ist aber alles noch reparabel bzw. Ersatz zu bekommen.
+                </p>
+
+                <p>
+                    Aktuell hat die Dicke 115.000 km auf der Uhr und ich hoffe sie wird mir weiterhin viel
+                    Freude bereiten.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-beach">
+        <div class="content">
+            <div class="card intro">
+
+                <img src="Images/schicki.jpg" alt="Honda im Jahr 2010">
+
+                <h2>
+                    So war der Zustand im Jahre 2010, ein Schmuckstück!
+                </h2>
+
+                <p>
+                    Aber ich hatte mich dazu entschlossen, die Dicke in Würde und im täglichem Gebrauch altern
+                    zu lassen. Leider waren zweimal andere Verkehrsteilnehmer unaufmerksam.
+                </p>
+
+                <p>
+                    Aber auch der Zahn der Zeit, das Wetter und die vielen Kilometer haben ihre deutlichen
+                    Spuren hinterlassen.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-space">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/unfall_blinker.jpg" alt="Unfallschaden Blinker">
+                    <img src="Images/unfall_beinschild.jpg" alt="Unfallschaden Beinschild">
+                    <img src="Images/unfall_motor.jpg" alt="Unfallschaden Motor">
+                </div>
+
+                <p>
+                    Im Moment plane ich eine Neulackierung und eine Abdichtung des Motors. Ich bin gespannt auf das
+                    Ergebnis.
+                </p>
+
+                <h1>
+                    Bleibt dran, es wird spannend!
+                </h1>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-stars">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/image2.png" alt="Werkstattbild 1">
+                    <img src="Images/image0.png" alt="Werkstattbild 2">
+                    <img src="Images/lackteile.jpg" alt="Lackteile">
+                </div>
+
+                <h1>
+                    Es geht ihr an den Kragen... diese Garage ist jetzt meine neue Werkstatt!
+                </h1>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-honda">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/Reparatur/image5.jpeg" alt="Reparaturbild">
+                    <img src="Images/Reparatur/Motor_offen.jpeg" alt="Offener Motor">
+                </div>
+
+                <h1>
+                    Der Patient ist vorbereitet... und Action
+                </h1>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/Reparatur/altersstempel.jpeg" alt="Altersstempel Motor">
+                    <img src="Images/Reparatur/schaltgabel.jpeg" alt="Schaltgabel">
+                </div>
+
+                <p>
+                    Das "Geburtsdatum" des Motors, 14 Januar 1982. Die Schaltgabeln sind noch fein!
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-beach">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Montage/Montage_1.jpeg" alt="Montagebild 1">
+                    <img src="Montage/Montage_2.jpeg" alt="Montagebild 2">
+                </div>
+
+                <p>
+                    Die Montage erfolgt in umgekehrter Reihenfolge. Ohje, wie ich diesen Satz aus den
+                    Reparaturanleitungen hasse! Glücklicherweise benötige ich die Anleitung nicht.
+                    Die relativ einfache Konstruktion und meine frühere Tätigkeit als Motorradmechaniker in einer
+                    Honda-Werkstatt ermöglichen mir die Montage aus dem Gedächtnis zu erledigen.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-stars">
+        <div class="content">
+            <div class="card intro">
+
+                <video controls preload="metadata">
+                    <source src="Montage/motor_run.mp4" type="video/mp4">
+                </video>
+
+                <p>
+                    Sie läuft etwas unrund (wir sehen später warum), aber nach einer Warmfahrt mit anschließender
+                    Synchronisation der Vergaser wird es besser sein.
+                </p>
+
+                <p>
+                    Sie sieht in diesem Zustand etwas zerfleddert aus. Die wahre Schönheit wird erst
+                    erstrahlen wenn die neulackierten Teile wieder montiert sind.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <section class="section section-honda">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/feddisch.jpeg">
+                    <img src="Images/feddisch_2.jpeg">
+                </div>
+
+                <p>
+                    Da ist sie wieder komplett. Sie erstrahlt in neuem Glanz und das macht mir extrem viel Freude.
+                    Die vierzig Jahre sieht man ihr doch nicht mehr an, oder? Über eBay habe ich den Gepäckträger mit
+                    zwei Koffern und einem Topcase
+                    erstanden und montiert. Damit sind jetzt auch etwas umfangreichere Ausfahrten möglich.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <section class="section section-space">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/vergaser_offen.jpeg">
+                    <img src="Images/vergaser_detail.jpeg">
+                </div>
+
+                <p>
+                    Ein kleiner Fehler hat sich noch eingeschlichen.
+                    Ich hatte vor 10 Jahren einen Satz Vergaser der Modellreihe SC01 auf eBay ersteigert und komplett
+                    überholt. Dieser Satz sollte die eingebauten und nach 40 Jahren verschlissenen Vergaser ersetzen.
+                    Leider fehlten die sechs Stopfen über den eingepressten Leerlaufdüsen. Dadurch erhielten die
+                    Leerlaufdüsen
+                    zusätzlichen Sprit und haben das Gemisch stark verfettet was die Funktion doch extrem beeinträchtigt
+                    hat.
+                </p>
+
+                <p>
+                    Ein wenig feinmechanisches Geschick und die fehlenden Stopfen waren aus Teflonmaterial angefertigt
+                    und montiert. Das sagt sich jetzt in einem Satz so daher.
+                    Die Demontage dauert mal eben 5 Stunden. Fehlersuche, Reparatur und die Montage nochmals 5 Stunden.
+                    Jetzt läuft sie schön rund und die erste Probefahrt war vielversprechend.
+                </p>
+
+            </div>
+        </div>
+    </section>
+    <section class="section section-dark">
+        <div class="content">
+            <div class="card intro">
+
+                <div class="gallery">
+                    <img src="Images/feddisch_3.jpeg">
+                </div>
+
+                <h1>
+                    Nu aber wirklich "Feddisch".
+                </h1>
+                <p>
+                    Das Projekt für den nächsten Winter steht auch schon fest.
+                    Die Zylinderkopfdichtung lässt an den seitlichen Ölrückführungen etwas von dem guten Schmierstoff
+                    raus.
+                    Diese Reparatur wird kombiniert mit einer neuen Auspuffanlage um den rostigen Anblick von vorn und
+                    die Kratzer an den Endschalldämpfern zu beseitigen.
+                </p>
+                <h1>
+                    Schaut doch gelegentlich vorbei, ich werde in Bild und Text berichten.
+                </h1>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
